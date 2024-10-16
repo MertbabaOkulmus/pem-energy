@@ -6,20 +6,15 @@ import email from "./email.png";
 import phone from "./phone.png";
 import search from "./search.png";
 
+
 import React, { useEffect, useState } from "react";
+import { Input } from "postcss";
 
 export default function RootLayout({ children }) {
   const [layoutList, setLayoutList] = useState([]);
   useEffect(() => {
     setLayoutList([
-      "Anasayfa",
-      "Hakkımızda",
-      "Haberler",
-      "Çözümler",
-      "Ürünler",
-      "Servis Destek",
-      "İletişim",
-      "Türkçe",
+      "Anasayfa","Hakkımızda","Haberler","Çözümler","Ürünler","Servis & Destek","İletişim","Türkçe"
     ]);
   }, []);
   return (
@@ -58,12 +53,13 @@ export default function RootLayout({ children }) {
                 </div>
               </div>
             </div>
-            <div className="flex  items-end bg-black pr-2 mb-0 ">
+            <div className="flex  items-end bg-black pr-2 mb-0 justify-center">
+              <input className=" border-white bg-black"/>
               <Image
-                height={30}
-                width={40}
+                height={25}
+                width={25}
                 src={search}
-                className=""
+                className=" relative right-8"
                 alt="search"
               />
             </div>
