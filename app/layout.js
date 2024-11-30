@@ -1,15 +1,11 @@
 "use client";
-import pemlogo from "./pemlogo.png";
+import pemlogo from "./assets/pemlogo.png";
 import Image from "next/image";
 import "./globals.css";
-import email from "./email.png";
-import phone from "./phone.png";
-import search from "./search.png";
-
-
+import email from "./assets/email.png";
+import phone from "./assets/phone.png";
+import search from "./assets/search.png";
 import React, { useEffect, useState } from "react";
-import { Input } from "postcss";
-
 export default function RootLayout({ children }) {
   const [layoutList, setLayoutList] = useState([]);
   useEffect(() => {
